@@ -8975,7 +8975,8 @@ ul {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #000000;
+  color: #ffffff;
+  font-size: calc(1rem + 0.5vw);
 }
 .nav_main .hamburger span {
   width: 1.5rem;
@@ -8989,13 +8990,14 @@ ul {
 .nav_main .hamburger span i {
   font-size: 0.7rem;
   color: #000000;
+  padding-top: -50%;
 }
 
 .nav_list {
   list-style: none;
   gap: 1rem;
   transform: translateY(-200%);
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
   height: 100vh;
   transition: all 0.5s ease-in-out;
@@ -9003,16 +9005,41 @@ ul {
   top: 0;
   left: 0;
   z-index: -1;
-  padding: 5rem;
+  padding-top: 5rem;
+  overflow-y: scroll;
 }
 
 .nav_list-item {
-  padding: 1rem 0;
-  color: #000000;
+  padding: 1rem 2rem;
+  color: #ffffff;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
+.intro {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/Untitled-1.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: -1;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.intro:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .intro {
+    background-position: right;
+  }
+}
 .nav_toggle {
   transform: translateY(0);
 }/*# sourceMappingURL=main.css.map */
