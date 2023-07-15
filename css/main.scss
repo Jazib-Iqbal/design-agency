@@ -1,0 +1,198 @@
+@import "scss/bootstrap";
+
+//fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap');
+
+// *{
+//     border: 1px solid red;
+// }
+
+
+//font variables
+$font_family-a: 'Roboto', sans-serif;
+$font_family-b: 'Butterfly Kids', sans-serif;
+
+
+// color variales
+$white: #ffffff;
+$black: #000000;
+$d-blue: #271344;
+$dul_blue: #361C5B;
+$blue: #1AB9FD;
+$color-orange: #FCC000;
+$color-crimson: #FD6766;
+$color-green: #ACCC4F;
+$color-yellow: #FDC100;
+$d-pink: #FF4981;
+$color_l-gray: #878786;
+
+.site_wrapper {
+  overflow-x: hidden;
+}
+
+//buttons
+.btn {
+  padding: .5rem 1.5rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0;
+}
+
+.btn_white-fill {
+  background-color: $white;
+
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+
+// styling of theme buttons
+
+.btn_theme {
+  display: inline-block;
+  text-decoration: none;
+  padding: .7rem 1.3rem .6rem;
+  border-radius: .5rem;
+  font-size: calc(.8rem + .2vw);
+  transition: all ease-in-out .2s;
+  background-color: $d-pink;
+  color: $white;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: $white;
+    border-color: $d-pink;
+    color: $color-crimson;
+  }
+
+}
+
+
+//global styling
+
+.custom_ul{
+  list-style: none;
+  display: flex;
+}
+
+.custom_anchor{
+  display: inline-block;
+  text-decoration: none;
+
+}
+
+.flex_just-contant{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+//Styling of nav section
+
+.nav_sect{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+
+}
+
+.nav_main{
+ 
+  padding: 1rem 0;
+
+  .logo{
+    color: $black;
+    animation: logo_anim 4s linear infinite;
+
+    img{
+      height: 4rem;
+
+    }
+  }
+
+  @keyframes logo_anim {
+    0%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(.5rem);
+    }
+    90%{
+      transform: translateY(-.5rem);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
+
+  .hamburger{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: $black;
+
+    span{
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: #eaeaea;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i{
+        font-size: .7rem;
+        color: $black;
+      }
+
+    }
+  }
+
+}
+
+.nav_list{
+  list-style: none;
+  gap: 1rem;
+  transform: translateY(-200%);
+  background-color: rgba($color: $black, $alpha: .05);
+  width: 100%;
+  height: 100vh;
+  transition: all .5s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  padding: 5rem;
+}
+
+.nav_list-item{
+  padding: 1rem 0;
+  color: $black;
+  font-size: calc(1rem + .2rem);
+  font-weight: 600;
+}
+
+
+.nav_toggle{
+  transform: translateY(0);
+}
