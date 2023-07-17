@@ -9074,9 +9074,10 @@ ul {
     top: 1rem;
     left: 0;
     padding-left: 0;
-    transform: translate(0, 26rem);
+    transform: translate(0, 26.5rem);
     padding-right: 3rem;
     width: 90vw;
+    font-size: calc(1rem + 0.5vw);
   }
 }
 .nav_toggle {

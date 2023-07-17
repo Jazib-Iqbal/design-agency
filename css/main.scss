@@ -262,7 +262,7 @@ ul {
     }
   }
 
-  
+
 }
 
 
@@ -290,15 +290,22 @@ ul {
     }
   }
 
-  .intro_inner h2 span{
-    top: 1rem;
-    left: 0;
-    padding-left: 0;
-    transform: translate(0, 26rem);
-    padding-right: 3rem;
-    width: 90vw;
-    // font-size: calc(1.5rem + .5vw);
+  .intro_inner h2 {
+
+    
+
+    span {
+      top: 1rem;
+      left: 0;
+      padding-left: 0;
+      transform: translate(0, 26.5rem);
+      padding-right: 3rem;
+      width: 90vw;
+      font-size: calc(1rem + .5vw);
+    }
   }
+
+  
 }
 
 .nav_toggle {
