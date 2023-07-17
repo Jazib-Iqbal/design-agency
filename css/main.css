@@ -8974,20 +8974,24 @@ ul {
 .nav_main .hamburger {
   display: flex;
   align-items: center;
+  padding-right: 0.25rem;
   gap: 0.5rem;
   color: #ffffff;
   font-size: calc(1rem + 0.5vw);
+  transition: all 0.3s ease-in-out;
 }
 .nav_main .hamburger span {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   background-color: #eaeaea;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0.5rem;
 }
 .nav_main .hamburger span i {
+  transition: all 0.2s ease-in-out;
   font-size: 0.7rem;
   color: #000000;
   padding-top: -50%;
@@ -8997,7 +9001,7 @@ ul {
   list-style: none;
   gap: 1rem;
   transform: translateY(-200%);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100vh;
   transition: all 0.5s ease-in-out;
@@ -9017,7 +9021,6 @@ ul {
 
 .intro {
   width: 100%;
-  height: 100vh;
   background-image: url(../img/intro-bg.jpg);
   background-size: cover;
   background-position: center center;
@@ -9034,15 +9037,53 @@ ul {
   background-color: rgba(0, 0, 0, 0.25);
 }
 
+.intro_inner {
+  position: relative;
+  z-index: 1;
+}
+.intro_inner h2 {
+  position: relative;
+  color: white;
+  padding: 15rem 0;
+  font-size: calc(3.5rem + 1vw);
+  font-weight: 400;
+  letter-spacing: 0.25rem;
+  display: inline-block;
+}
+.intro_inner h2 span {
+  position: absolute;
+  right: 0;
+  bottom: 7rem;
+  color: #ffffff;
+  font-size: calc(1.5rem + 0.5vw);
+  transform: translateX(100%);
+  display: block;
+  padding-left: 4rem;
+  width: 40rem;
+}
+
 @media (max-width: 768px) {
   .intro {
     background-position: center;
     background-image: url(../img/intro-bg-md.jpg);
   }
   .intro:before {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .intro_inner h2 span {
+    top: 1rem;
+    left: 0;
+    padding-left: 0;
+    transform: translate(0, 26rem);
+    padding-right: 3rem;
+    width: 90vw;
+    font-size: calc(1rem + 0.5vw);
   }
 }
 .nav_toggle {
   transform: translateY(0);
+}
+
+.icon_rotate i {
+  transform: rotate(45deg);
 }/*# sourceMappingURL=main.css.map */

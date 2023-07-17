@@ -11,8 +11,10 @@
 
 
 //font variables
-$font_family-a: 'Roboto', sans-serif;
-$font_family-b: 'Butterfly Kids', sans-serif;
+$font_family-a: 'Roboto',
+sans-serif;
+$font_family-b: 'Butterfly Kids',
+sans-serif;
 
 
 // color variales
@@ -87,18 +89,18 @@ ul {
 
 //global styling
 
-.custom_ul{
+.custom_ul {
   list-style: none;
   display: flex;
 }
 
-.custom_anchor{
+.custom_anchor {
   display: inline-block;
   text-decoration: none;
 
 }
 
-.flex_just-contant{
+.flex_just-contant {
   display: flex;
   justify-content: space-between;
 }
@@ -107,63 +109,71 @@ ul {
 
 //Styling of nav section
 
-.nav_sect{
+.nav_sect {
 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  
+
 
 }
 
-.nav_main{
- 
+.nav_main {
+
   padding: 1rem 0;
 
-  .logo{
+  .logo {
     color: $black;
     animation: logo_anim 4s linear infinite;
 
-    img{
+    img {
       height: 4rem;
 
     }
   }
 
   @keyframes logo_anim {
-    0%{
+    0% {
       transform: translateY(0);
     }
-    50%{
+
+    50% {
       transform: translateY(.5rem);
     }
-    90%{
+
+    90% {
       transform: translateY(-.5rem);
     }
-    100%{
+
+    100% {
       transform: translateY(0);
     }
   }
 
-  .hamburger{
+  .hamburger {
     display: flex;
     align-items: center;
+    padding-right: 0.25rem;
     gap: .5rem;
     color: $white;
     font-size: calc(1rem + .5vw);
+    transition: all .3s ease-in-out;
 
-    span{
-      width: 1.5rem;
-      height: 1.5rem;
+    span {
+      width: 2rem;
+      height: 2rem;
       background-color: #eaeaea;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: .5rem;
+
       // line-height: 1.5rem;
       // text-align: center;
-      i{
+      i {
+        transition: all .2s ease-in-out;
         font-size: .7rem;
         color: $black;
         padding-top: -50%;
@@ -174,11 +184,11 @@ ul {
 
 }
 
-.nav_list{
+.nav_list {
   list-style: none;
   gap: 1rem;
   transform: translateY(-200%);
-  background-color: rgba($color: $white, $alpha: .5);
+  background-color: rgba($color: $black, $alpha: .5);
   width: 100%;
   height: 100vh;
   transition: all .5s ease-in-out;
@@ -190,7 +200,7 @@ ul {
   // overflow-y: scroll;
 }
 
-.nav_list-item{
+.nav_list-item {
   padding: 1rem 2rem;
   color: $white;
   font-size: calc(1rem + .2rem);
@@ -198,9 +208,9 @@ ul {
 }
 
 
-.intro{
+.intro {
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   background-image: url(../img/intro-bg.jpg);
   background-size: cover;
   background-position: center center;
@@ -209,7 +219,8 @@ ul {
   // animation: bgc_anim 5s linear infinite;
   background-repeat: no-repeat;
   overflow: hidden;
-  &:before{
+
+  &:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -218,31 +229,92 @@ ul {
 
 
   }
+
+
+
 }
 
-// @keyframes bgc_anim{
+
+.intro_inner {
+  position: relative;
+  z-index: 1;
+
+  h2 {
+    position: relative;
+    color: white;
+    padding: 15rem 0;
+
+    font-size: calc(3.5rem + 1vw);
+    font-weight: 400;
+    letter-spacing: .25rem;
+    display: inline-block;
+
+    span {
+      position: absolute;
+      right: 0;
+      bottom: 7rem;
+      color: $white;
+      font-size: calc(1.5rem + .5vw);
+      transform: translateX(100%);
+      display: block;
+      padding-left: 4rem;
+      width: 40rem;
+    }
+  }
+
   
+}
+
+
+
+
+// @keyframes bgc_anim{
+
 //     0% { background-size: 100%; }
 //     100% { background-size: 120%; }
-  
+
 // }
 
 
 
-@media(max-width: 768px){
-  .intro{
+@media(max-width: 768px) {
+  .intro {
     background-position: center;
     background-image: url(../img/intro-bg-md.jpg);
-    &:before{
-      
-      background-color: rgba($color: $black, $alpha: .6);
-  
-  
+
+    &:before {
+
+      background-color: rgba($color: $black, $alpha: .3);
+
+
     }
+  }
+
+  .intro_inner h2 span{
+    top: 1rem;
+    left: 0;
+    padding-left: 0;
+    transform: translate(0, 26rem);
+    padding-right: 3rem;
+    width: 90vw;
+    font-size: calc(1rem + .5vw);
   }
 }
 
-.nav_toggle{
+.nav_toggle {
   transform: translateY(0);
-  
+
+
+
+
+
+}
+
+.icon_rotate {
+
+
+  i {
+    transform: rotate(45deg);
+  }
+
 }
