@@ -8908,23 +8908,6 @@ ul {
   margin: 0;
 }
 
-.btn_theme {
-  display: inline-block;
-  text-decoration: none;
-  padding: 0.7rem 1.3rem 0.6rem;
-  border-radius: 0.5rem;
-  font-size: calc(0.8rem + 0.2vw);
-  transition: all ease-in-out 0.2s;
-  background-color: #FF4981;
-  color: #ffffff;
-  border: 1px solid transparent;
-}
-.btn_theme:hover {
-  background-color: #ffffff;
-  border-color: #FF4981;
-  color: #FD6766;
-}
-
 .custom_ul {
   list-style: none;
   display: flex;
@@ -8956,20 +8939,6 @@ ul {
 .nav_main .logo img {
   height: 4rem;
 }
-@keyframes logo_anim {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(0.5rem);
-  }
-  90% {
-    transform: translateY(-0.5rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 .nav_main .hamburger {
   display: flex;
   align-items: center;
@@ -8988,6 +8957,7 @@ ul {
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
+  transition: all 0.2s ease-in-out;
 }
 .nav_main .hamburger span i {
   transition: all 0.2s ease-in-out;
@@ -9083,6 +9053,9 @@ ul {
   transform: translateY(0);
 }
 
-.icon_rotate i {
+.icon_rotate span {
+  background-color: #D8FE35 !important;
+}
+.icon_rotate span i {
   transform: rotate(45deg);
 }/*# sourceMappingURL=main.css.map */
