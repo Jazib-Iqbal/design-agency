@@ -6,13 +6,27 @@ let nav_sect = document.querySelector("#nav_sect")
 
 
 
-hamburger.addEventListener('click', function() {
+hamburger.addEventListener('click', function () {
 
-    nav_list.classList.toggle('nav_toggle')
+  nav_list.classList.toggle('nav_toggle')
 
-    hamburger.classList.toggle('icon_rotate')
+  hamburger.classList.toggle('icon_rotate')
 
-    // nav_sect.style.zIndex = "100" 
-  
+  // nav_sect.style.zIndex = "100" 
+
+})
+
+
+var ball = document.querySelector('.ball');
+
+var tl = new TimelineMax({
+  repeat: -1,
+  yoyo: true
+});
+tl.add('start')
+  .to(ball, 3, {
+    y: 10,
+    // ease: ease
   })
-
+  
+  

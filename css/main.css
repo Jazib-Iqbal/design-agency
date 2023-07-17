@@ -8952,7 +8952,6 @@ ul {
 }
 .nav_main .logo {
   color: #000000;
-  animation: logo_anim 4s linear infinite;
 }
 .nav_main .logo img {
   height: 4rem;
