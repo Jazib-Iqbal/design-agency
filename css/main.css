@@ -9077,7 +9077,6 @@ ul {
     transform: translate(0, 26rem);
     padding-right: 3rem;
     width: 90vw;
-    font-size: calc(1rem + 0.5vw);
   }
 }
 .nav_toggle {
