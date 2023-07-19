@@ -8935,14 +8935,11 @@ ul {
 }
 .nav_main .logo {
   color: #000000;
-}
-.nav_main .logo img {
-  height: 4rem;
+  width: 2rem;
 }
 .nav_main .hamburger {
   display: flex;
   align-items: center;
-  padding-right: 0.25rem;
   gap: 0.5rem;
   color: #ffffff;
   font-size: calc(1rem + 0.5vw);
@@ -8956,7 +8953,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0.5rem;
   transition: all 0.2s ease-in-out;
 }
 .nav_main .hamburger span i {
@@ -9043,9 +9039,10 @@ ul {
     top: 1rem;
     left: 0;
     padding-left: 0;
-    transform: translate(0, 26.5rem);
-    padding-right: 3rem;
-    width: 90vw;
+    transform: translate(0, 25rem);
+    padding-right: 1.5rem;
+    text-align: justify;
+    width: 100vw;
     font-size: calc(1rem + 0.5vw);
   }
 }

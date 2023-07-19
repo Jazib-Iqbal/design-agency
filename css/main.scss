@@ -123,11 +123,18 @@ ul {
 
   .logo {
     color: $black;
+    width: 2rem;
     // animation: logo_anim 4s linear infinite;
 
-    img {
-      height: 4rem;
+    // img {
+    //   height: 4rem;
 
+    // }
+
+    svg{
+      .circle_sm{
+        // visibility: hidden;
+      }
     }
   }
 
@@ -152,7 +159,7 @@ ul {
   .hamburger {
     display: flex;
     align-items: center;
-    padding-right: 0.25rem;
+    // padding-right: 0.25rem;
     gap: .5rem;
     color: $white;
     font-size: calc(1rem + .5vw);
@@ -166,7 +173,7 @@ ul {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: .5rem;
+      // margin-top: .5rem;
       transition: all .2s ease-in-out;
 
       // line-height: 1.5rem;
@@ -297,9 +304,10 @@ ul {
       top: 1rem;
       left: 0;
       padding-left: 0;
-      transform: translate(0, 26.5rem);
-      padding-right: 3rem;
-      width: 90vw;
+      transform: translate(0, 25rem);
+      padding-right: 1.5rem;
+      text-align: justify;
+      width: 100vw;
       font-size: calc(1rem + .5vw);
     }
   }

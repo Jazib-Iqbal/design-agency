@@ -29,4 +29,25 @@ tl.add('start')
     // ease: ease
   })
   
+
+
+  gsap.to(".g_inner", {
+    x: -300,
+    // display: block,
+    stagger:{
+        each: .1,
+        visibility: visible,
+        
+        from: "center",
+    },
+
+    scrollTrigger: {
+        trigger: ".logo",
+        start: "top top",
+        // scrub: .2,
+        // x: 700,
+        
+    }
+
+})
   
