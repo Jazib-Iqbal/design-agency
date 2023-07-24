@@ -4,6 +4,10 @@ let nav_list = document.querySelector("#nav_list")
 
 let nav_sect = document.querySelector("#nav_sect")
 
+let body = document.querySelector("#body")
+
+
+
 
 
 hamburger.addEventListener('click', function () {
@@ -11,6 +15,9 @@ hamburger.addEventListener('click', function () {
   nav_list.classList.toggle('nav_toggle')
 
   hamburger.classList.toggle('icon_rotate')
+
+
+  body.style.overflowY = hidden;
 
   // nav_sect.style.zIndex = "100" 
 
@@ -31,23 +38,25 @@ tl.add('start')
   
 
 
-  gsap.to(".g_inner", {
-    x: -300,
+gsap.to(".circle_sm", {
+  // opacity: 1,  
+    x: 0,
     // display: block,
     stagger:{
-        each: .1,
-        visibility: visible,
         
-        from: "center",
+        // opacity: 1,  
+        // each: .1,
+        amount: 1,
+        // from: "center",
     },
 
-    scrollTrigger: {
-        trigger: ".logo",
-        start: "top top",
-        // scrub: .2,
-        // x: 700,
+    // scrollTrigger: {
+    //     trigger: ".logo",
+    //     start: "top top",
+    //     // scrub: .2,
+    //     // x: 700,
         
-    }
+    // }
 
 })
   
