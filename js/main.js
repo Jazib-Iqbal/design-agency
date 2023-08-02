@@ -59,4 +59,19 @@ gsap.to(".circle_sm", {
     // }
 
 })
+
+
+gsap.to(".scroll_heading", {
+  duration: .5,
   
+  // width: "100%",
+  x: -1400,
+  scrollTrigger: {
+      trigger: ".company_slogan",
+      start: "top 80%",
+      scrub: .5,
+      // x: -700,
+      
+  }
+})
+

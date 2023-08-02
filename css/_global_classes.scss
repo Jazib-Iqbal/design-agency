@@ -1,8 +1,38 @@
-.sec_space{
+.sec_space {
     padding: 4rem 0;
 }
 
 
-.sm{
+.sm {
     max-width: 60rem;
+}
+
+
+.sec_heading {
+    text-transform: capitalize;
+    font-size: calc(1.5rem + 1vw);
+  
+    h2 {
+      line-height: 2.5rem;
+    }
+  
+    small {
+      display: block;
+      text-transform: uppercase;
+      font-size: 40%;
+      font-weight: bold;
+      line-height: 1.5rem;
+    }
+  }
+
+.hollow_text {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px $black;
+    -moz-text-fill-color: transparent;
+}
+
+@media(max-width: 768px) {
+    .sec_space {
+        padding: 2rem 0;
+    }
 }

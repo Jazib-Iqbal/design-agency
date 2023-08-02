@@ -108,6 +108,11 @@ ul {
 
 //Styling of nav section
 
+header {
+  position: relative;
+  z-index: 100;
+}
+
 .nav_sect {
 
   position: fixed;
@@ -118,10 +123,7 @@ ul {
 
 }
 
-header{
-  position: relative;
-  z-index: 100;
-}
+
 
 .nav_main {
 
@@ -138,9 +140,10 @@ header{
     // }
 
     svg {
+
       // overflow: initial;
       .circle_sm {
-        
+
         // opacity: 0;
         transform: translateX(-400px);
       }
@@ -233,10 +236,10 @@ header{
   &:hover {
 
 
-    .nav_list-item{
-      color: $black!important;
+    .nav_list-item {
+      color: $black !important;
     }
-    
+
 
     &:before {
       transform: translateX(0);
@@ -254,17 +257,7 @@ header{
 }
 
 
-
-// .nav_list-li:hover{
-//   .nav_list-item{
-//     color: $black;
-//   }
-  
-
-//   &:before {
-//     transform: translateX(0);
-//   }
-// }
+//styling of intro section
 
 .intro {
   width: 100%;
@@ -355,19 +348,13 @@ header{
 .services {
   .card {
 
-
-
-
     position: relative;
     text-align: center;
     padding: 4rem 3rem;
-    // background-color: #eaeaea;
     transition: all .3s ease-in-out;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    // background-image: url(../img/bg-circle.svg);
-    // visibility: hidden;
 
     img {
       position: absolute;
@@ -384,39 +371,153 @@ header{
 
     i {
       color: $black;
-      font-size: 1.5rem;
+      font-size: 1rem;
+
     }
 
     h2 {
       margin: 1.5rem 0;
     }
+
+
   }
 
   .card:hover img {
 
     opacity: 1;
 
-    // transition: all 3s ease-in-out;
-    // background-image: url(../img/bg-circle.svg);
-    // background: visibile;
+
 
   }
 }
-
 
 
 
 //styling of intro_further section
 
-.about_company {
-  text-transform: capitalize;
-  font-size: calc(1rem + 1vw);
 
-  small {
+
+
+
+
+.intro_further-inner {
+  padding-bottom: 3rem;
+}
+
+
+
+
+
+
+
+
+
+// Button 
+.go-down-btn {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 14rem;
+    height: 14rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: 1px solid $black;
+    border-radius: 50%;
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    width: 8rem;
+    height: 8rem;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 8rem;
+    outline: 1px solid $black;
+    font-size: 4rem;
+    
+  }
+
+  svg {
+    position: relative;
+    z-index: 10;
     display: block;
-    text-transform: uppercase;
+  }
+
+  text {
+    font-size: 10px;
+    transform-origin: center;
   }
 }
+
+// Animation
+@keyframes rotate-btn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.go-down-btn text {
+  animation: rotate-btn 10s linear infinite;
+}
+
+
+
+
+//styling of our_moto section
+
+.our_moto {}
+
+.moto_card {
+  text-align: justify;
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  strong {
+    text-decoration: underline;
+  }
+}
+
+
+//styling of company_slogan section
+
+.company_slogan{
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-top-color: lighten($color: $black, $amount: 30%);
+  border-bottom-color: lighten($color: $black, $amount: 30%);
+  h2{
+    font-size: 5rem;
+    white-space: nowrap;
+    transform: translateX(100%);
+  }
+}
+
+
+
+//styling of featured_proj section
+
+
+.featured_proj .sec_heading h2{
+  font-size: calc(2rem + .5vw);
+}
+
+
 
 
 
@@ -444,6 +545,8 @@ header{
 
 
 @media(max-width: 768px) {
+  //
+
   .intro {
     background-position: center;
     background-image: url(../img/intro-bg-md.jpg);
@@ -457,12 +560,31 @@ header{
   }
 
 
+  //styling of .intro_further section
+
+  .intro_further {
+
+    .row [class^="col-"] {
+      padding: 1rem 12px;
+    }
+
+  }
+
+  //styling of .our_moto section
+
+  .our_moto {
+    .row [class^="col-"] {
+      padding: 1rem 12px;
+    }
+  }
+
 
 }
 
 .nav_toggle {
   transform: translateY(0);
-  body{
+
+  body {
     overflow-y: hidden;
   }
 
