@@ -1,3 +1,5 @@
+
+@import "./atom";
 .sec_space {
     padding: 4rem 0;
 }
@@ -7,6 +9,61 @@
     max-width: 60rem;
 }
 
+.btn_custom{
+    // display: inline-block;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    border-radius: 2rem;
+    font-size: calc(.3rem + .5vw);
+
+    
+    
+
+    i{
+        position: relative;
+        z-index: 10;
+        font-size: .65rem;
+        color: $black;
+        font-weight: normal;
+
+        &:after{
+            content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $color-green;
+        border-radius: 50%;
+        z-index: -1;
+        }
+        
+    }
+}
+
+.btn_black{
+    // padding-left: 3rem;
+    background-color: $black;
+    color: $white;
+    text-transform: capitalize;
+
+}
+
+
+.ul_style-n{
+    list-style: none;
+}
+
+.custom_a{
+    display: inline-block;
+    text-decoration: none;
+}
 
 .sec_heading {
     text-transform: capitalize;
@@ -25,6 +82,8 @@
     }
   }
 
+
+
 .hollow_text {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 3px $black;
@@ -36,3 +95,4 @@
         padding: 2rem 0;
     }
 }
+

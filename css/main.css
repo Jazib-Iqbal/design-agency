@@ -9075,6 +9075,53 @@ textarea.form-control-lg {
   max-width: 60rem;
 }
 
+.btn_custom {
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 2rem;
+  font-size: calc(0.3rem + 0.5vw);
+}
+.btn_custom i {
+  position: relative;
+  z-index: 10;
+  font-size: 0.65rem;
+  color: #000000;
+  font-weight: normal;
+}
+.btn_custom i:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #D8FE35;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.btn_black {
+  background-color: #000000;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.ul_style-n {
+  list-style: none;
+}
+
+.custom_a {
+  display: inline-block;
+  text-decoration: none;
+}
+
 .sec_heading {
   text-transform: capitalize;
   font-size: calc(1.5rem + 1vw);
@@ -9092,7 +9139,7 @@ textarea.form-control-lg {
 
 .hollow_text {
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 3px #000;
+  -webkit-text-stroke: 3px #000000;
   -moz-text-fill-color: transparent;
 }
 
@@ -9406,10 +9453,79 @@ header {
   transform: translateX(100%);
 }
 
+.featured_proj {
+  border-bottom: 1px solid #b3b3b3;
+}
+.featured_proj .sec_heading {
+  margin-bottom: 2rem;
+}
 .featured_proj .sec_heading h2 {
   font-size: calc(2rem + 0.5vw);
 }
 
+.featured_proj-list {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.featured_proj-list li {
+  border-bottom: 1px solid #b3b3b3;
+}
+.featured_proj-list li:hover .featured_list-item {
+  color: #000000;
+}
+
+.featured_list-item {
+  color: #000000;
+  position: relative;
+  margin-left: 7rem;
+  font-size: calc(1.5rem + 0.5vw);
+  color: #b3b3b3;
+  padding: 1rem 0;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+}
+.featured_list-item strong {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-7rem, 1.7rem);
+  text-transform: uppercase;
+  font-size: 40%;
+  color: #000000;
+}
+
+.featured_img-sec {
+  position: relative;
+  width: calc(17rem + 2vw);
+  height: calc(17rem + 2vw);
+  display: block;
+  border-radius: 50%;
+  background-color: #D8FE35;
+}
+.featured_img-sec .featured_person-img {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  transform: rotate(-15deg);
+  width: calc(14rem + 2vw);
+  overflow: hidden;
+}
+.featured_img-sec .featured_person-img img {
+  width: 100%;
+  animation: img_anim 15s linear infinite;
+}
+
+@keyframes img_anim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @media (max-width: 992px) {
   .intro_inner h2 span {
     top: 1rem;
@@ -9435,6 +9551,9 @@ header {
   }
   .our_moto .row [class^=col-] {
     padding: 1rem 12px;
+  }
+  .featured_img-sec {
+    margin: 4rem 0;
   }
 }
 .nav_toggle {
