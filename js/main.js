@@ -75,3 +75,20 @@ gsap.to(".scroll_heading", {
   }
 })
 
+
+var slider1 = new Swiper ('.slider1', {
+  effect: 'slide',
+  
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
