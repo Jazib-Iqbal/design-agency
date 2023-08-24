@@ -17,7 +17,7 @@ hamburger.addEventListener('click', function () {
   hamburger.classList.toggle('icon_rotate')
 
 
-  body.style.overflowY = hidden;
+  body.classList.toggle('body_overflow')
 
   // nav_sect.style.zIndex = "100" 
 
@@ -76,8 +76,54 @@ gsap.to(".scroll_heading", {
 })
 
 
+// gsap.to(".our_moto", {
+  
+  
+  
+//   scrollTrigger: {
+//       trigger: ".nav_sect",
+//       // start: "top 80%",
+//       // end: "noEnd",
+//       toggleClass: "bg_visible",
+//       markers: true,
+//       // toggleAction
+
+//       start: "center center",
+//       // end: "+=900",
+//     // toggleClass: "active"
+
+    
+
+//   }
+// })
+
+
+let video_logo = document.querySelector(".video_logo");
+let my_video = document.querySelector("#video");
+let vid_logo = document.querySelector("#vid_logo")
+
+video_logo.addEventListener('click',function(){
+  // console.log("hello");
+  if(my_video.paused){
+    my_video.play();
+    vid_logo.style.display = 'none';
+    
+  }
+  else
+      {my_video.pause();
+        vid_logo.style.display = 'block';
+      // updatePlayPauseIcon('pause')
+    }
+  
+})
+
 var slider1 = new Swiper ('.slider1', {
   effect: 'slide',
+  loop: 'loop',
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   
   pagination: {
     el: '.swiper-pagination',
@@ -92,3 +138,14 @@ var slider1 = new Swiper ('.slider1', {
     el: '.swiper-scrollbar',
   },
 });
+
+
+
+
+
+
+// let my_hello = document.querySelector(".hello")
+
+// my_hello.addEventListener('click', function(){
+//   console.log(hello)
+// })

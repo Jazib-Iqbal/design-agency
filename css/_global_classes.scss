@@ -21,6 +21,10 @@
     // }
 }
 
+.border_left{
+    border-left: 1px solid $black;
+}
+
 .transition_class{
     transition: all .3s linear;
 }
@@ -92,6 +96,18 @@
 .custom_ul{
     display: flex;
     list-style: none;
+    align-items: center;
+}
+
+
+.custom_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_elements{
+    display: flex;
     align-items: center;
 }
 
